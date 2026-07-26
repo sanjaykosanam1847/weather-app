@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div id="card">
+  <div class="search-wrap">
+    <form id="search-form">
+      <svg id="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="city-input" type="text" placeholder="Search for a city" autocomplete="off" />
+      <div id="suggest-spinner" class="spinner small"></div>
+    </form>
+    <div id="suggestions"></div>
+  </div>
+
+  <div id="body-area">
+    <div id="placeholder" class="placeholder">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="width:56px;height:56px;margin-bottom:12px;opacity:0.8;"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+      <p>Search a city to see the current weather.</p>
+    </div>
+
+    <div id="loading" class="spinner hidden"></div>
+
+    <div id="error" class="error-msg hidden">
+      <p>Couldn't load weather for that location. Try again.</p>
+    </div>
+
+    <div id="results" class="hidden">
+      <div id="location-line"></div>
+      <p id="country-line"></p>
+      <div id="icon-area"></div>
+      <div id="temp-line"></div>
+      <p id="condition-line"></p>
+      <p id="feels-line"></p>
+      <div id="stats-row">
+        <div class="stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69s5 5.5 5 9.31a5 5 0 0 1-10 0c0-3.81 5-9.31 5-9.31Z"/></svg>
+          <span id="humidity-val"></span>
+        </div>
+        <div class="stat">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.6 4.6A2 2 0 1 1 11 8H2M12.6 19.4A2 2 0 1 0 14 16H2M17.6 7.6A2.5 2.5 0 1 1 19.5 12H2"/></svg>
+          <span id="wind-val"></span>
+        </div>
+      </div>
+      <div id="forecast"></div>
+    </div>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
